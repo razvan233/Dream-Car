@@ -1,0 +1,568 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a,
+p {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+h5,
+h6 {
+  font-size: 2.4rem;
+}
+
+@font-face {
+  font-family: dancing;
+  src: url(../fonts/DancingScript-Medium.ttf);
+}
+
+@font-face {
+  font-family: signika;
+  src: url(../fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+  font-family: cinzel;
+  src: url(../fonts/Cinzel-Medium.ttf);
+}
+
+.firstPage header {
+  background-color: rgba(20, 20, 26, 0.7);
+}
+
+.firstPage header nav {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.firstPage header nav .logo {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  padding-left: 5rem;
+  font-family: dancing, sans-serif;
+}
+
+.firstPage header nav .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+}
+
+.firstPage header nav .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: signika, sans-serif;
+}
+
+.firstPage header nav .content ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.firstPage header nav .burger {
+  display: none;
+}
+
+.firstPage .hero {
+  min-height: 90vh;
+}
+
+.firstPage .hero .hero-content {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../assets/main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.firstPage .hero .hero-content h2 {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-family: cinzel, sans-serif;
+  margin: 10rem 2rem;
+}
+
+.firstPage .hero .hero-content button {
+  margin: 1rem 5rem;
+  padding: 2rem 3rem;
+  font-family: signika, sans-serif;
+  border-style: none;
+  color: white;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+}
+
+.firstPage .hero .hero-content button:hover {
+  background-color: rgba(79, 21, 146, 0.7);
+}
+
+@media screen and (max-width: 640px) {
+  .firstPage header {
+    background-color: #32324e;
+    height: 10vh;
+  }
+  .firstPage header nav {
+    height: 100%;
+  }
+  .firstPage header nav .logo {
+    color: white;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .firstPage header nav .content ul {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-color: #32324e;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .firstPage header nav .content ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .firstPage header nav .content.toggle ul {
+    left: 0%;
+  }
+  .firstPage header nav .burger {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20rem;
+            flex: 1 1 20rem;
+    height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-right: 4rem;
+  }
+  .firstPage header nav .burger .menu-icon {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 100%;
+    margin: 0rem 1rem;
+    cursor: pointer;
+  }
+  .firstPage header nav .burger .menu-icon span {
+    width: 5rem;
+    height: 0.3rem;
+    background-color: red;
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .firstPage header nav .burger .menu-icon .line-1 {
+    width: 4.2rem;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .firstPage header nav .burger .menu-icon .line-2 {
+    width: 3.5rem;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .firstPage header nav .burger .menu-icon:hover span:nth-child(1) {
+    width: 3.5rem;
+  }
+  .firstPage header nav .burger .menu-icon:hover span:nth-child(2) {
+    width: 4.0rem;
+  }
+  .firstPage header nav .burger .menu-icon.active span:nth-child(1) {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: rotate(-45deg) translate(-10px, 5px);
+            transform: rotate(-45deg) translate(-10px, 5px);
+    width: 55px;
+  }
+  .firstPage header nav .burger .menu-icon.active span:nth-child(2) {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 0;
+  }
+  .firstPage header nav .burger .menu-icon.active span:nth-child(3) {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: rotate(45deg) translate(-10px, -8px);
+            transform: rotate(45deg) translate(-10px, -8px);
+    width: 55px;
+  }
+  .firstPage header nav .burger .menu-icon:active .content ul {
+    top: 50%;
+  }
+}
+
+.secondPage {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.secondPage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.secondPage .box1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.secondPage .box3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.secondPage .box4 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+@media screen and (max-width: 640px) {
+  .secondPage {
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .secondPage .box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+.thirdPage {
+  min-height: 80vh;
+  background-image: url(../assets/pexels-enrico-perini-705425.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thirdPage .contact-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-top-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  width: 50vw;
+  height: 50rem;
+}
+
+.thirdPage .contact-area .name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thirdPage .contact-area .name input {
+  width: 100%;
+  margin: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.thirdPage .contact-area .name label {
+  margin: 1rem 1.5rem;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.thirdPage .contact-area .email {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thirdPage .contact-area .email input {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1rem 1.5rem;
+}
+
+.thirdPage .contact-area .email label {
+  color: white;
+  margin: 1rem 1.5rem;
+  font-size: 3.5rem;
+}
+
+.thirdPage .contact-area .message {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thirdPage .contact-area .message textarea {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1rem 1.5rem;
+}
+
+.thirdPage .contact-area .message label {
+  color: white;
+  margin: 1rem 1.5rem;
+  font-size: 3.5rem;
+}
+
+.thirdPage .contact-area button {
+  margin: 1rem 5rem 0rem 5rem;
+  padding: 2rem 3rem;
+  font-family: signika, sans-serif;
+  border-style: none;
+  color: white;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+}
+
+.thirdPage .contact-area button:hover {
+  background-color: rgba(79, 21, 146, 0.7);
+}
+
+@media screen and (max-width: 640px) {
+  .thirdPage .contact-area {
+    width: 80vw;
+  }
+  .thirdPage .contact-area .name {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .thirdPage .contact-area .name input {
+    height: 3.5rem;
+  }
+  .thirdPage .contact-area .email {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .thirdPage .contact-area .email input {
+    height: 3.5rem;
+  }
+  .thirdPage .contact-area .message {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .thirdPage .contact-area .message textarea {
+    height: 10rem;
+  }
+  .thirdPage .contact-area button {
+    margin-top: 2rem;
+    padding: 0.5rem 0.8rem;
+  }
+  footer .bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .bar .logo {
+    padding-left: 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .thirdPage .contact-area {
+    width: 100vw;
+  }
+}
+
+footer {
+  min-height: 20vh;
+  background-color: rgba(20, 20, 26, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .bar {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+footer .bar .media {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .bar .media img {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .bar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1;
+          flex: 2 1;
+  font-family: dancing, sans-serif;
+}
+/*# sourceMappingURL=main.css.map */
